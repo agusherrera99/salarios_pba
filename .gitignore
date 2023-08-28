@@ -1,0 +1,6 @@
+.venv
+csvs
+pkls
+tests
+create_dict.py
+format_data.py
