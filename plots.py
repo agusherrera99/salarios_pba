@@ -52,4 +52,5 @@ def createPlot(currency, dollar=False):
 createPlot(ars)
 createPlot(usd, dollar=True)
 
+st.write(F'Autor: Agustin Herrera | agustinherrera.dev@gmail.com')
 st.write(F'Data: https://datos.gob.ar/dataset/produccion-salarios-por-departamentopartido-sector-actividad | https://www.ambito.com/contenidos/dolar-informal-historico.html')
