@@ -26,7 +26,7 @@ def createPlot(currency, dollar=False):
     fig, ax = plt.subplots(figsize=(12, 10))
     if dollar:
         bars = ax.bar(year, avg, tick_label=year, color='#4ade80')
-        ax.set_title(F'Promedio Anual de Salarios Dólares en Dólares \n Sector: {activity}', fontsize=fontsize)
+        ax.set_title(F'Promedio Anual de Salarios en Dólares \n Sector: {activity}', fontsize=fontsize)
         ax.set_xlabel('Año', fontsize=fontsize)
         ax.set_ylabel('Salario Mensual en Dolares', fontsize=fontsize)
         ax.tick_params(axis='both', labelsize=fontsize)
