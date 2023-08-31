@@ -5,7 +5,7 @@ base = {}
 
 # Dataframes
 data_pkl = pd.read_pickle('pkls/pba.pkl')
-dolar_pkl = pd.read_pickle('pkls/dollar_values.pkl')
+dollar_pkl = pd.read_pickle('pkls/dollar_values.pkl')
 
 cities = list(set(data_pkl['Partido']))
 
@@ -36,7 +36,7 @@ for city in base.keys():
                 base[city][activity.title()]['ARS'][1].append(avg)
 
                 # Añade los promedios correspondientes a los años a la lista USD, utilizando la cotización correcta para cada año.
-                dolar_serie = dolar_pkl.query(F'Año == {str(year)}')
-                base[city][activity.title()]['USD'][1].append(avg / dolar_serie['Promedio'].values[0])
+                dollar_serie = dollar_pkl.query(F'Año == {str(year)}')
+                base[city][activity.title()]['USD'][1].append(avg / dollar_serie['Promedio'].values[0])
 
 # pd.to_pickle(base, 'pkls/pba_dict.pkl')
